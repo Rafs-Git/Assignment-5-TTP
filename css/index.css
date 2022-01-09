@@ -1,0 +1,19 @@
+/*====== Color Dropdown Menu Logic ======*/
+
+#color-menu {
+    position: relative;
+    display: inline-block;
+}
+
+#colors-list {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.color-btns {
+    display: inline;
+}
+  
+
+#color-menu:hover #colors-list {display: block;}
