@@ -69,9 +69,14 @@ document.getElementById("reset").addEventListener("click", () => {
 
 //This function will Colors all cell
 function reply_click(clicked_id) {
-    alert(clicked_id)
-    let clickedColor = document.getElementById(clicked_id)
+    //alert(clicked_id)
+    //let clickedColor = clicked_id
+    //console.log(clickedColor)
+    return clicked_id
 }
 document.getElementById("paint-fillAll-buttons").addEventListener("click", () => {
+    let colorId = reply_click(clicked_id)
+    let colorEl = document.getElementById(colorId)
+    console.log(colorEl.value)
 
 })
