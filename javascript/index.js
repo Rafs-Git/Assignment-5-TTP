@@ -1,12 +1,13 @@
 let rowCount = 1;
 let columnCount = 1;
-document.getElementById("add-row").addEventListener("click", () => {
-    rowCount++;
-    let newRow = document.createElement("tr");
-    for (let i = 0; i < columnCount; i++) {
+
+
+document.getElementById("add-column").addEventListener("click", () => {
+    let rows = document.querySelectorAll("tr");
+    columnCount++
+    for (let i = 0; i < rows.length; i++) {
         let newCell = document.createElement("td");
         newCell.innerHTML = '<button class = "color-grid"></button>'
-        newRow.append(newCell)
+        rows[i].append(newCell)
     }
-    document.getElementById("main-table").append(newRow)
 })
