@@ -1,8 +1,6 @@
 let rowCount = 1;
 let columnCount = 1;
 
-
-//This function does the logic for adding a row into the grid
 document.getElementById("add-row").addEventListener("click", () => {
     rowCount++;
     let newRow = document.createElement("tr");
@@ -40,10 +38,7 @@ document.getElementById("remove-row").addEventListener("click", () => {
 document.getElementById("remove-column").addEventListener("click", () => {
     if (columnCount < 2) {
         return;
+=======
     }
-    const allRows = document.querySelectorAll("tr");
-    for (let i = 0; i < allRows.length; i++) {
-        allRows[i].lastChild.remove();
-    }
-    columnCount--
+    document.getElementById("main-table").append(newRow)
 })
