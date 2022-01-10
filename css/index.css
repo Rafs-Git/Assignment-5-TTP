@@ -143,10 +143,29 @@ footer {
 
 /*=== Main (Painting Area) Changes ===*/
 main {
+    display: flex;
     height: 632px;
     width: 80%;
     border: black 2px solid;
     margin: 0 auto;
     position: block;
+    justify-content: center;
+    overflow: auto;
 }
 
+.color-grid {
+    margin: 0;
+    border: 1px black solid;
+    height: 25px;
+    width: 25px;
+    background-color: transparent;
+}
+
+table {
+    margin: auto;
+}
+
+td {
+    width: fit-content;
+    height: fit-content;
+}
