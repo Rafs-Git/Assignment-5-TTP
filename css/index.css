@@ -87,14 +87,17 @@ footer {
     position: absolute;
     z-index: 1;
     bottom: 100%;
-    margin: 10px;
+    margin: 10px 10px -10px 10px;
     background-color: darkolivegreen;
-    height: 300px;
+    height: fit-content;
 }
 
 .color-btns {
-    display: block;
+    display: fixed;
+    height: 40px;
+    width: 200px;
 }
+
   
 /* Shows color list when hovering over color menu */
 #color-menu:hover #colors-list {display: block;}
