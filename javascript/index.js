@@ -11,4 +11,3 @@ document.getElementById("add-column").addEventListener("click", () => {
         rows[i].append(newCell)
     }
 })
-let test = "test"
