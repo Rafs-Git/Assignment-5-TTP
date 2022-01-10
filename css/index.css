@@ -1,4 +1,81 @@
-/*====== Color Dropdown Menu Logic ======*/
+/*====== Styling Site ======*/
+/*=== Global Changes ===*/
+
+body {
+    background-image: url(/images/canvas-background.jpg);
+    margin: 0;
+    padding: 0;
+}
+/*=== Header (Grid Manipulation Options) Changes ===*/
+header {
+    background-image: url(/images/brick-background.jpeg);
+    border-radius: 50px;
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    margin: 2% auto 20px auto;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border: black 1px solid;
+}
+
+.grid-manipulation-buttons {
+    background-image: url(/images/gear-background.jpg);
+    border-radius: 5px;
+    display: inline;
+    margin: 10px;
+    height: 50px;
+    width: 200px;
+    border: solid black 2px;
+    color: blanchedalmond;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.grid-manipulation-buttons:active {
+    top: 2px;
+    left: 1px;
+    box-shadow: none;
+}
+
+/*=== Footer (Color Manipulation Options) Changes ===*/
+footer {
+    background-image: url(/images/brick-background.jpeg);
+    border-radius: 50px;
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    background-color: rebeccapurple;
+    margin: 20px auto 2% auto;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border: black 1px solid;
+}
+
+.paint-manipulation-buttons {
+    border-radius: 3px;
+    display: inline;
+    margin: 10px;
+    height: 50px;
+    width: 200px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+    border: darkolivegreen 2px groove;
+    color: brown;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: url(/images/desk-background.jpg);
+}
+
+.paint-manipulation-buttons:active {
+    top: 2px;
+    left: 1px;
+    box-shadow: none;
+}
+
+/*= Color Dropdown Menu Logic and Style =*/
 
 #color-menu {
     position: relative;
@@ -9,11 +86,67 @@
     display: none;
     position: absolute;
     z-index: 1;
+    bottom: 100%;
+    margin: 10px 10px -10px 10px;
+    height: fit-content;
 }
 
 .color-btns {
-    display: inline;
+    display: fixed;
+    height: 40px;
+    width: 200px;
+    border: black 1px solid;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.color-btns:active {
+    top: 2px;
+    left: 1px;
+    box-shadow: none;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#red {
+    background-color: red;
+}
+
+#green {
+    background-color: green;
+}
+
+#pink {
+    background-color: pink;
+}
+
+#orange {
+    background-color: orange;
+}
+
+#black {
+    background-color: black;
+}
+
+#white {
+    background-color: white;
+}
+
+#yellow {
+    background-color: yellow;
 }
   
-
+/* Shows color list when hovering over color menu */
 #color-menu:hover #colors-list {display: block;}
+
+
+/*=== Main (Painting Area) Changes ===*/
+main {
+    height: 632px;
+    width: 80%;
+    border: black 2px solid;
+    margin: 0 auto;
+    position: block;
+}
+

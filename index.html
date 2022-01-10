@@ -1,40 +1,70 @@
 <!DOCTYPE html>
 <html>
+
     <head>
+
         <title>
             Assignment 5 for TTP
         </title>
+
         <meta name="author" content="Rafid, Max, and Zijinhui">
         <link href="/css/index.css" rel="stylesheet">
+
     </head>
+
     <body>
-        <div id="grid-manipulation">
+
+        <!-- Holds All Grid Manipulation Options -->
+        <header id="grid-manipulation">
+
             <button class="grid-manipulation-buttons">Add Row</button>
             <button class="grid-manipulation-buttons">Add Column</button>
             <button class="grid-manipulation-buttons">Remove Row</button>
             <button class="grid-manipulation-buttons">Remove Column</button>
             <button class="grid-manipulation-buttons">Reset</button>
-        </div>
-        <div id="grid-area">
 
-        </div>
-        <div id="color-settings">
+        <!-- Closes #grid-manipulation -->
+        </header>
+
+        <!-- Contains picture area -->
+        <main id="grid-area">
+        
+        <!-- Closes #grid-area -->
+        </main>
+
+        <!-- Holds All Color Options -->
+        <footer id="color-settings">
+
             <button class="paint-manipulation-buttons">Fill Unedited</button>
             <button class="paint-manipulation-buttons">Fill ALL</button>
             <button class="paint-manipulation-buttons">Clear All</button>
+
+            <!-- Dropdown Menu For Colors -->
             <div id="color-menu">
+
                 <button id="color-menu-button" class="paint-manipulation-buttons">Colors</button>
+
+                <!-- Dropdown menu content -->
                 <div id="colors-list">
-                    <button class="color-btns">Blue</button>
-                    <button class="color-btns">Red</button>
-                    <button class="color-btns">Green</button>
-                    <button class="color-btns">Pink</button>
-                    <button class="color-btns">Orange</button>
-                    <button class="color-btns">Black</button>
-                    <button class="color-btns">White</button>
-                    <button class="color-btns">Yellow</button>
+
+                    <button id="blue" class="color-btns"></button>
+                    <button id="red" class="color-btns"></button>
+                    <button id="green" class="color-btns"></button>
+                    <button id="pink" class="color-btns"></button>
+                    <button id="orange" class="color-btns"></button>
+                    <button id="black" class="color-btns"></button>
+                    <button id="white" class="color-btns"></button>
+                    <button id="yellow" class="color-btns"></button>
+
+                <!-- Closes #colors-list -->
                 </div>
+
+            <!-- Closes #color-menu -->
             </div>
-        </div>
+
+        <!-- Closes #color-settings -->
+        </footer>
+
     </body>
+
 </html>
