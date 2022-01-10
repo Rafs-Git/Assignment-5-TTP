@@ -1,13 +1,13 @@
 let rowCount = 1;
 let columnCount = 1;
 
-document.getElementById("remove-column").addEventListener("click", () => {
-    if (columnCount < 2) {
-        return;
+document.getElementById("add-row").addEventListener("click", () => {
+    rowCount++;
+    let newRow = document.createElement("tr");
+    for (let i = 0; i < columnCount; i++) {
+        let newCell = document.createElement("td");
+        newCell.innerHTML = '<button class = "color-grid"></button>'
+        newRow.append(newCell)
     }
-    const allRows = document.querySelectorAll("tr");
-    for (let i = 0; i < allRows.length; i++) {
-        allRows[i].lastChild.remove();
-    }
-    columnCount--
+    document.getElementById("main-table").append(newRow)
 })
