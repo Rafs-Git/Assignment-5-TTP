@@ -42,9 +42,9 @@ document.getElementById("remove-column").addEventListener("click", () => {
     if (columnCount < 2) {
         return;
     }
-    const allRows = document.querySelectorAll("tr");
-    for (let i = 0; i < allRows.length; i++) {
-        allRows[i].lastChild.remove();
+    const allRows = document.querySelectorAll("tr")
+    for (let i = 0; i < allRows.lengt; i++) {
+        allRows[i].lastChild.remove()   
     }
     columnCount--
 })
@@ -64,4 +64,8 @@ document.getElementById("reset").addEventListener("click", () => {
     grid.append(newRow)
     rowCount = 1;
     columnCount = 1;
+})
+=======
+    columnCount--;
+    document.getElementById("main-table").append(newRow)
 })
