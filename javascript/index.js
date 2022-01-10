@@ -65,7 +65,3 @@ document.getElementById("reset").addEventListener("click", () => {
     rowCount = 1;
     columnCount = 1;
 })
-=======
-    columnCount--;
-    document.getElementById("main-table").append(newRow)
-})
