@@ -60,9 +60,9 @@ document.getElementById("remove-column").addEventListener("click", () => {
     if (columnCount < 2) {
         return;
     }
-    const allRows = document.querySelectorAll("tr");
+    const allRows = document.querySelectorAll("tr")
     for (let i = 0; i < allRows.length; i++) {
-        allRows[i].lastChild.remove();
+        allRows[i].lastChild.remove()   
     }
     columnCount--
 })

@@ -2,13 +2,13 @@
 /*=== Global Changes ===*/
 
 body {
-    background-image: url(/images/canvas-background.jpg);
+    background-image: url(../images/canvas-background.jpg);
     margin: 0;
     padding: 0;
 }
 /*=== Header (Grid Manipulation Options) Changes ===*/
 header {
-    background-image: url(/images/brick-background.jpeg);
+    background-image: url(../images/brick-background.jpeg);
     border-radius: 50px;
     width: 80%;
     height: fit-content;
@@ -21,7 +21,7 @@ header {
 }
 
 .grid-manipulation-buttons {
-    background-image: url(/images/gear-background.jpg);
+    background-image: url(../images/gear-background.jpg);
     border-radius: 5px;
     display: inline;
     margin: 10px;
@@ -42,7 +42,7 @@ header {
 
 /*=== Footer (Color Manipulation Options) Changes ===*/
 footer {
-    background-image: url(/images/brick-background.jpeg);
+    background-image: url(../images/brick-background.jpeg);
     border-radius: 50px;
     width: 80%;
     height: fit-content;
@@ -66,7 +66,7 @@ footer {
     color: brown;
     font-size: 16px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-image: url(/images/desk-background.jpg);
+    background-image: url(../images/desk-background.jpg);
 }
 
 .paint-manipulation-buttons:active {
