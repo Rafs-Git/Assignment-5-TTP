@@ -10,3 +10,5 @@ document.getElementById("add-row").addEventListener("click", () => {
     }
     document.getElementById("main-table").append(newRow)
 })
+
+let test = "trying to fix merge issue"
