@@ -5,6 +5,7 @@ let grid = document.getElementById("main-table")
 const firstRow = document.createElement("tr")
 const firstCell = document.createElement("td")
 const firstButton = document.createElement("button")
+
 firstButton.className = "color-grid"
     firstButton.addEventListener("mouseover", function(e) {
         if (e.buttons == 1 || e.buttons == 3) {
