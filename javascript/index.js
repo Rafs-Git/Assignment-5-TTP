@@ -1,32 +1,31 @@
 let rowCount = 1;
 let columnCount = 1;
-let currentColor = "t"
+let currentColor = ""
+
+function createNewCell() {
+    const cell = document.createElement("td")
+    const button = document.createElement("button")
+    button.className = "color-grid"
+    button.addEventListener("mouseover", function(e) {
+        if (e.buttons == 1 || e.buttons == 3) {
+            button.style.backgroundColor = currentColor
+            }
+    })
+    cell.append(button)
+    return cell;
+}
+//Initial state
 let grid = document.getElementById("main-table")
 const firstRow = document.createElement("tr")
-const firstCell = document.createElement("td")
-const firstButton = document.createElement("button")
-firstButton.className = "color-grid"
-    firstButton.addEventListener("mouseover", function(e) {
-        if (e.buttons == 1 || e.buttons == 3) {
-        firstCell.style.backgroundColor = currentColor
-        }
-    })
-firstCell.append(firstButton)
+const firstCell = createNewCell()
 firstRow.append(firstCell)
 grid.append(firstRow)
-
 //This function does the logic for adding a row into the grid
 document.getElementById("add-row").addEventListener("click", () => {
     rowCount++;
-    let newRow = document.createElement("tr");
+    const newRow = document.createElement("tr");
     for (let i = 0; i < columnCount; i++) {
-        let newCell = document.createElement("td");
-        newCell.innerHTML = '<button class = "color-grid"></button>'
-        newCell.addEventListener("mouseover", function(e) {
-            if (e.buttons == 1 || e.buttons == 3) {
-            newCell.style.backgroundColor = currentColor
-            }
-        })
+        const newCell = createNewCell()
         newRow.append(newCell)
     }
     document.getElementById("main-table").append(newRow)
@@ -34,16 +33,10 @@ document.getElementById("add-row").addEventListener("click", () => {
 
 //This function does the logic of adding a column into the grid
 document.getElementById("add-column").addEventListener("click", () => {
-    let rows = document.querySelectorAll("tr");
+    const rows = document.querySelectorAll("tr");
     columnCount++
     for (let i = 0; i < rows.length; i++) {
-        let newCell = document.createElement("td");
-        newCell.innerHTML = '<button class = "color-grid"></button>'
-        newCell.addEventListener("mouseover", function(e) {
-            if (e.buttons == 1 || e.buttons == 3) {
-            newCell.style.backgroundColor = currentColor
-            }
-        })
+        const newCell = createNewCell()
         rows[i].append(newCell)
     }
 })
@@ -80,14 +73,10 @@ document.getElementById("reset").addEventListener("click", () => {
     while (grid.hasChildNodes()) {
         grid.lastChild.remove();
     }
+
+    //reinitializing state
     let newRow = document.createElement("tr")
-    let newCell = document.createElement("td")
-    newCell.innerHTML = '<button class = "color-grid"></button>'
-    newCell.addEventListener("mouseover", function(e) {
-        if (e.buttons == 1 || e.buttons == 3) {
-        newCell.style.backgroundColor = currentColor
-        }
-    })
+    let newCell = createNewCell()
     newRow.append(newCell)
     grid.append(newRow)
     rowCount = 1;
