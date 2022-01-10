@@ -1,7 +1,8 @@
 
 let rowCount = 1;
 let columnCount = 1;
-let grid = document.getElementById("main-table")
+const grid = document.getElementById("main-table")
+
 
 //This function does the logic for adding a row into the grid
 document.getElementById("add-row").addEventListener("click", () => {
