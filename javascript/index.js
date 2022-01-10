@@ -1,13 +1,13 @@
 let rowCount = 1;
 let columnCount = 1;
 
-document.getElementById("remove-row").addEventListener("click", () => {
-    if (rowCount < 2) {
+document.getElementById("remove-column").addEventListener("click", () => {
+    if (columnCount < 2) {
         return;
     }
     const allRows = document.querySelectorAll("tr");
-    const lastRow = allRows[allRows.length - 1]
-    document.getElementById("main-table").removeChild(lastRow)
-    rowCount--;
+    for (let i = 0; i < allRows.length; i++) {
+        allRows[i].lastChild.remove();
+    }
+    columnCount--
 })
-
