@@ -65,3 +65,13 @@ document.getElementById("reset").addEventListener("click", () => {
     rowCount = 1;
     columnCount = 1;
 })
+
+
+//This function will Colors all cell
+function reply_click(clicked_id) {
+    alert(clicked_id)
+    let clickedColor = document.getElementById(clicked_id)
+}
+document.getElementById("paint-fillAll-buttons").addEventListener("click", () => {
+
+})
