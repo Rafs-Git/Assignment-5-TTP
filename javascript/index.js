@@ -38,7 +38,11 @@ document.getElementById("remove-row").addEventListener("click", () => {
 document.getElementById("remove-column").addEventListener("click", () => {
     if (columnCount < 2) {
         return;
-=======
     }
+    const allRows = document.querySelectorAll("tr")
+    for (let i = 0; i < allRows.lengt; i++) {
+        allRows[i].lastChild.remove()   
+    }
+    columnCount--;
     document.getElementById("main-table").append(newRow)
 })
