@@ -4,18 +4,21 @@ let currentColor = ""
 
 function createNewCell() {
     const cell = document.createElement("td")
-    const button = document.createElement("button")
+    const button = document.createElement("p")
     button.className = "color-grid"
     button.addEventListener("mouseover", function(e) {
-        if (e.buttons == 1 || e.buttons == 3) {
+        if (e.buttons == 1) {
             button.style.backgroundColor = currentColor
             }
+    })
+    button.addEventListener("mousedown", ()=> {
+        button.style.backgroundColor = currentColor
     })
     cell.append(button)
     return cell;
 }
 //Initial state
-let grid = document.getElementById("main-table")
+const grid = document.getElementById("main-table")
 const firstRow = document.createElement("tr")
 const firstCell = createNewCell()
 firstRow.append(firstCell)
@@ -75,8 +78,8 @@ document.getElementById("reset").addEventListener("click", () => {
     }
 
     //reinitializing state
-    let newRow = document.createElement("tr")
-    let newCell = createNewCell()
+    const newRow = document.createElement("tr")
+    const newCell = createNewCell()
     newRow.append(newCell)
     grid.append(newRow)
     rowCount = 1;
