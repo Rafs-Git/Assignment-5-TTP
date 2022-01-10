@@ -1,6 +1,9 @@
+
 let rowCount = 1;
 let columnCount = 1;
+let grid = document.getElementById("main-table")
 
+//This function does the logic for adding a row into the grid
 document.getElementById("add-row").addEventListener("click", () => {
     rowCount++;
     let newRow = document.createElement("tr");
@@ -30,7 +33,7 @@ document.getElementById("remove-row").addEventListener("click", () => {
     }
     const allRows = document.querySelectorAll("tr");
     const lastRow = allRows[allRows.length - 1]
-    document.getElementById("main-table").removeChild(lastRow)
+    grid.removeChild(lastRow)
     rowCount--;
 })
 
@@ -43,6 +46,26 @@ document.getElementById("remove-column").addEventListener("click", () => {
     for (let i = 0; i < allRows.lengt; i++) {
         allRows[i].lastChild.remove()   
     }
+    columnCount--
+})
+
+//This function will reset the grid back to having one uncolored cell
+document.getElementById("reset").addEventListener("click", () => {
+    if (rowCount < 2 && columnCount < 2) {
+        return;
+    }
+    while (grid.hasChildNodes()) {
+        grid.lastChild.remove();
+    }
+    let newRow = document.createElement("tr")
+    let newCell = document.createElement("td")
+    newCell.innerHTML = '<button class = "color-grid"></button>'
+    newRow.append(newCell)
+    grid.append(newRow)
+    rowCount = 1;
+    columnCount = 1;
+})
+=======
     columnCount--;
     document.getElementById("main-table").append(newRow)
 })
