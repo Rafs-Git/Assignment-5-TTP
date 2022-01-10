@@ -13,22 +13,29 @@
     </head>
 
     <body>
-
         <!-- Holds All Grid Manipulation Options -->
         <header id="grid-manipulation">
 
-            <button class="grid-manipulation-buttons">Add Row</button>
-            <button class="grid-manipulation-buttons">Add Column</button>
-            <button class="grid-manipulation-buttons">Remove Row</button>
-            <button class="grid-manipulation-buttons">Remove Column</button>
-            <button class="grid-manipulation-buttons">Reset</button>
+            <button class="grid-manipulation-buttons" id = "add-row">Add Row</button>
+            <button class="grid-manipulation-buttons" id = "add-column">Add Column</button>
+            <button class="grid-manipulation-buttons" id = "remove-row">Remove Row</button>
+            <button class="grid-manipulation-buttons" id = "remove-column">Remove Column</button>
+            <button class="grid-manipulation-buttons" id = "reset">Reset</button>
 
         <!-- Closes #grid-manipulation -->
         </header>
 
         <!-- Contains picture area -->
         <main id="grid-area">
-        
+
+            <table id = "main-table">
+
+                <tr>
+                    <td><button class = "color-grid"></button></td>
+                </tr>
+
+            </table>
+
         <!-- Closes #grid-area -->
         </main>
 
@@ -65,6 +72,7 @@
         <!-- Closes #color-settings -->
         </footer>
 
+    <script src="/javascript/index.js"></script>
     </body>
 
 </html>
