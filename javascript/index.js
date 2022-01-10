@@ -43,7 +43,7 @@ document.getElementById("remove-column").addEventListener("click", () => {
         return;
     }
     const allRows = document.querySelectorAll("tr")
-    for (let i = 0; i < allRows.lengt; i++) {
+    for (let i = 0; i < allRows.length; i++) {
         allRows[i].lastChild.remove()   
     }
     columnCount--
