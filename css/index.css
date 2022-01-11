@@ -79,7 +79,7 @@ footer {
     color: brown;
     font-size: 16px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-image: url(/images/desk-background.jpg);
+    background-image: url(../images/desk-background.jpg);
 }
 #paint-fillAll-buttons {
     border-radius: 3px;
@@ -92,7 +92,7 @@ footer {
     color: brown;
     font-size: 16px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-image: url(/images/desk-background.jpg);
+    background-image: url(../images/desk-background.jpg);
 }
 #paint-clearAll-buttons {
     border-radius: 3px;
@@ -105,7 +105,7 @@ footer {
     color: brown;
     font-size: 16px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-image: url(/images/desk-background.jpg);
+    background-image: url(../images/desk-background.jpg);
 }
 
 .paint-manipulation-buttons:active {
