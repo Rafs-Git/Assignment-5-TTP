@@ -108,9 +108,10 @@ document.getElementById("paint-fillAll-buttons").addEventListener("click", () =>
     }
 
 })*/
+
+//This function will fill all grid
 let td = document.getElementsByTagName('p #color-grid')
 document.getElementById("paint-fillAll-buttons").addEventListener("click", () => {
-    console.log(td)
     document.querySelectorAll('p').forEach(e => e.style.backgroundColor = currentColor)
 })
 //This function will fill color to All Unedited Square
@@ -130,9 +131,10 @@ document.getElementById("paint-fillUnedited-buttons").addEventListener("click", 
     }
 })
 
-/*document.getElementById("paint-clearAll-buttons").addEventListener("click", () => {
+document.getElementById("paint-clearAll-buttons").addEventListener("click", () => {
+    document.querySelectorAll('p').forEach(e => e.style.backgroundColor = "")
 
-})*/
+})
 
 //All the buttons from the dropdown menu
 //Added logic to change currentcolor to the selected one
