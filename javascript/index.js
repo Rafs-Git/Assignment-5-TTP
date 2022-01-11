@@ -5,7 +5,7 @@ let currentColor = ""
 function createNewCell() {
     const cell = document.createElement("td")
     const button = document.createElement("p")
-    button.className = "color-grid"
+    button.id = "color-grid"
     button.addEventListener("mouseover", function(e) {
         if (e.buttons == 1) {
             button.style.backgroundColor = currentColor
@@ -69,7 +69,9 @@ document.getElementById("remove-column").addEventListener("click", () => {
 
 //This function will reset the grid back to having one uncolored cell
 document.getElementById("reset").addEventListener("click", () => {
+    //when there is only one grid with color, uncolor it
     if (rowCount < 2 && columnCount < 2) {
+        document.querySelector('p').style.backgroundColor = ""
         return;
     }
     currentColor = ""
@@ -86,29 +88,30 @@ document.getElementById("reset").addEventListener("click", () => {
     columnCount = 1;
 })
 
-//All the buttons from the dropdown menu
-//Added logic to change currentcolor to the selected one
-document.getElementById("blue").addEventListener("click", () => {
-    currentColor = "blue"
+
+//This function will get the current Selected color
+function reply_click(clicked_id) {
+    currentColor = clicked_id
+    //console.log(currentColor)
+}
+
+//This function will fill all grid
+document.getElementById("paint-fillAll-buttons").addEventListener("click", () => {
+    document.querySelectorAll('p').forEach(e => e.style.backgroundColor = currentColor)
 })
-document.getElementById("red").addEventListener("click", () => {
-    currentColor = "red"
+
+//This function will fill color to All Unedited Square
+document.getElementById("paint-fillUnedited-buttons").addEventListener("click", () => {
+    document.querySelectorAll('p').forEach(e => {
+        if(e.style.backgroundColor === "") {
+            e.style.backgroundColor = currentColor
+        }
+    })       
 })
-document.getElementById("green").addEventListener("click", () => {
-    currentColor = "green"
+
+//This function will clear all color grids to no color
+document.getElementById("paint-clearAll-buttons").addEventListener("click", () => {
+    document.querySelectorAll('p').forEach(e => e.style.backgroundColor = "")
+
 })
-document.getElementById("pink").addEventListener("click", () => {
-    currentColor = "pink"
-})
-document.getElementById("orange").addEventListener("click", () => {
-    currentColor = "orange"
-})
-document.getElementById("white").addEventListener("click", () => {
-    currentColor = "white"
-})
-document.getElementById("yellow").addEventListener("click", () => {
-    currentColor = "yellow"
-})
-document.getElementById("black").addEventListener("click", () => {
-    currentColor = "black"
-})
+
