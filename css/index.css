@@ -190,7 +190,7 @@ main {
     overflow: auto;
 }
 
-.color-grid {
+#color-grid {
     margin: 0;
     border: 1px black solid;
     height: 25px;
@@ -205,4 +205,5 @@ table {
 td {
     width: fit-content;
     height: fit-content;
+    border: blue 2px solid;
 }

@@ -5,7 +5,7 @@ let currentColor = ""
 function createNewCell() {
     const cell = document.createElement("td")
     const button = document.createElement("p")
-    button.className = "color-grid"
+    button.id = "color-grid"
     button.addEventListener("mouseover", function(e) {
         if (e.buttons == 1) {
             button.style.backgroundColor = currentColor
@@ -96,6 +96,7 @@ function reply_click(clicked_id) {
 }
 
 //This function will fill all grid
+/*let table = document.getElementById("main-table")
 document.getElementById("paint-fillAll-buttons").addEventListener("click", () => {
     for (let row = 0; row < columnCount; row++) {
         for (let col = 0; col < rowCount; col++) {
@@ -106,23 +107,32 @@ document.getElementById("paint-fillAll-buttons").addEventListener("click", () =>
         }
     }
 
+})*/
+let td = document.getElementsByTagName('p #color-grid')
+document.getElementById("paint-fillAll-buttons").addEventListener("click", () => {
+    console.log(td)
+    document.querySelectorAll('p').forEach(e => e.style.backgroundColor = currentColor)
 })
-
 //This function will fill color to All Unedited Square
 document.getElementById("paint-fillUnedited-buttons").addEventListener("click", () => {
     for (let r = 0; r < columnCount; r++) {
         for (let c = 0; c < rowCount; c++) {
             let current = document.getElementById("main-table").rows[r].cells[c]
-            
-            if (current.style.backgroundColor === null) {
+            //let bcolor = current.style.backgroundColor
+            //console.log(bcolor + "test")
+            if (!current.style.backgroundColor) {
                 current.style.backgroundColor = currentColor
+                console.log(r)
             }
-            console.log(r)
-            console.log(current.style.backgroundColor)
+         
 
         }
     }
 })
+
+/*document.getElementById("paint-clearAll-buttons").addEventListener("click", () => {
+
+})*/
 
 //All the buttons from the dropdown menu
 //Added logic to change currentcolor to the selected one
